@@ -9,6 +9,7 @@
     <!-- 新 Bootstrap4 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="./iconfont.css">
 </head>
 <style>
     .carousel-inner img {
@@ -20,8 +21,37 @@
 <body>
 
     <div class="container-fluid">
+        <!-- 顶部通栏 -->
+        <header>
+            <div class="row bg-light">
+                <div class="col-2 border">
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" style="text-align:center;font-size: 10px;">
+                            <i class="iconfont icon-shouji" style="font-size: 5px;"></i>
+                            手机黑马财富
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#"><img src="images/timg.gif"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 border pt-2" style="text-align:center;font-size: 10px;">
+                    <i class="iconfont icon-dianhua" style="font-size: 5px;"></i>
+                    4006-618-9090(服务时间:9:00-21:00)
+                </div>
+                <div class="col-2 border pt-2" style="text-align:center;font-size: 10px;">常见问题&nbsp;&nbsp;&nbsp;财富登录</div>
+                <div class="col-3" style="text-align:center;font-size: 10px;">
+                    <button class="btn btn-primary" type="submit" style="text-align:center;font-size: 10px;">免费注册</button>
+                    &nbsp;&nbsp;&nbsp;
+                    <button class="btn btn-light pt-2" type="submit" style="text-align:center;font-size: 10px;">登录</button>
+
+                </div>
+            </div>
+        </header>
+        <!-- 顶部通栏 -->
         <!-- 头部 -->
-        <header class="row one">
+        <nav class="row one">
             <div class="col-4 pl-5"><img src="images/logo.png" alt=""></div>
             <div class="col-1 pt-3">首页</div>
             <div class="col-1 pt-3">我要投资</div>
@@ -30,7 +60,8 @@
             <div class="col-1 pt-3">新手专区</div>
             <div class="col-2 pt-3">最新动态</div>
             <div class="col-1 pt-3">个人中心</div>
-        </header>
+        </nav>
+        <!-- 轮播 -->
         <!-- 头部 -->
         <div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -42,7 +73,6 @@
                 <li data-target="#demo" data-slide-to="3"></li>
                 <li data-target="#demo" data-slide-to="4"></li>
             </ul>
-
             <!-- 轮播图片 -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -61,7 +91,6 @@
                     <img src="images/轮播图/5.jpg">
                 </div>
             </div>
-
             <!-- 左右切换按钮 -->
             <a class="carousel-control-prev" href="#demo" data-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
@@ -69,10 +98,8 @@
             <a class="carousel-control-next" href="#demo" data-slide="next">
                 <span class="carousel-control-next-icon"></span>
             </a>
-
         </div>
-
-
+        <!-- 轮播 -->
     </div>
 
 
