@@ -1,7 +1,28 @@
-.one{
+.one {
     /* height: 50%; */
     /* width: 100%; */
     background-color: #2E3340;
     color: rgb(226, 221, 221);
     font-size: 15px;
+}
+
+
+.circle a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    color: rgb(12, 12, 12)(7, 3, 3);
+    box-shadow: 0 0 0 1px rgb(77, 73, 73) inset;
+    transition: box-shadow 0.3s ease 0s;
+    border-radius: 16px;
+    text-decoration: none;
+}
+
+.circle a:hover {
+    color: #fff;
+    background-color: #2E3340;
+}
+
+span:hover {
+    color: blue;
 }
