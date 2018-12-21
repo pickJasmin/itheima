@@ -1,306 +1,554 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
     <!-- 新 Bootstrap4 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="./iconfont.css">
+    <style>
+        .carousel-inner img {
+                /* height: 10%; */
+                width: 100%;
+            }
+        </style>
+
 </head>
-<style>
-    .carousel-inner img {
-        /* height: 10%; */
-        width: 100%;
-    }
-</style>
 
 <body>
 
-    <div class="container-fluid">
-        <!-- 顶部通栏 -->
-        <header class="heima_topBar hidden-sm hidden-xs bg-secondary">
-            <div class="row bg-light">
-                <div class="col-2 border">
-                    <div class="dropdown">
-                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false" style="text-align:center;font-size: 10px;">
-                            <i class="iconfont icon-shouji" style="font-size: 5px;"></i>
-                            <span>手机黑马财富</span>
-                            
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#"><img src="images/timg.gif"></a>
-                        </div>
-                    </div>
+    <header class="heima_topBar hidden-sm hidden-xs bg-secondary">
+        <!-- 顶部 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <a href="#" class="heima_app">
+                        <span class="heima_icon heima_icon_phone"></span>
+                        <i class="iconfont icon-shouji" style="font-size: 5px;"></i>
+                        <span>手机黑马财富</span>
+                        <span class="glyphicon glyphicon-menu-down"></span>
+                        <!-- <img src="images/logo.png" alt=""> -->
+                    </a>
                 </div>
-                <div class="col-5 border pt-2" style="text-align:center;font-size: 10px;">
+                <div class="col-md-5">
+                    <span class="heima_icon heima_icon_tel"></span>
                     <i class="iconfont icon-dianhua" style="font-size: 5px;"></i>
-                    4006-618-9090(服务时间:9:00-21:00)
+                    <span>4006-618-9090(服务时间:9:00-21:00)</span>
+
                 </div>
-                <div class="col-2 border pt-2" style="text-align:center;font-size: 10px; cursor: pointer;">常见问题&nbsp;&nbsp;&nbsp;财富登录</div>
-                <div class="col-3" style="text-align:center;font-size: 10px;">
+                <div class="col-md-2">
+                    <a href="#">常见问题</a>
+                    <a href="#" class="m_110">用户登陆</a>
+                </div>
+                <div class="col-md-3">
                     <button class="btn btn-primary" type="submit" style="text-align:center;font-size: 10px;">免费注册</button>
                     &nbsp;&nbsp;&nbsp;
                     <button class="btn btn-light pt-2" type="submit" style="text-align:center;font-size: 10px;">登录</button>
 
                 </div>
             </div>
-
-            <!-- 顶部通栏 -->
-            <!-- 头部 -->
-            <nav class="row one">
-                <div class="col-4 pl-5"><img src="images/logo.png" alt=""></div>
-                <div class="col-1 pt-3" style="cursor: pointer;">首页</div>
-                <div class="col-1 pt-3" style="cursor: pointer;">我要投资</div>
-                <div class="col-1 pt-3" style="cursor: pointer;">我要借贷</div>
-                <div class="col-1 pt-3" style="cursor: pointer;">平台介绍</div>
-                <div class="col-1 pt-3" style="cursor: pointer;">新手专区</div>
-                <div class="col-2 pt-3" style="cursor: pointer;">最新动态</div>
-                <div class="col-1 pt-3" style="cursor: pointer;">个人中心</div>
-            </nav>
-        </header>
-        <!-- 轮播 -->
+        </div>
+        <!-- 顶部 -->
         <!-- 头部 -->
-        <div id="demo" class="carousel slide" data-ride="carousel">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="logo" style="width:200px;">
+            </a>
+            <a class="navbar-brand" href="#">首页</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">我要投资</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">我要借贷</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">平台介绍</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">新手专区</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">最新动态</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">个人中心</a>
+                    </li>
 
-            <!-- 指示符 -->
-            <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-                <li data-target="#demo" data-slide-to="3"></li>
-                <li data-target="#demo" data-slide-to="4"></li>
-            </ul>
-            <!-- 轮播图片 -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/轮播图/1.jpg">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/轮播图/2.jpg">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/轮播图/3.jpg">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/轮播图/4.jpg">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/轮播图/5.jpg">
-                </div>
+                </ul>
             </div>
-            <!-- 左右切换按钮 -->
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
+        </nav>
+        <!-- 头部 -->
+    </header>
+
+
+    <!-- 轮播 -->
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- 指示符 -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+            <li data-target="#demo" data-slide-to="4"></li>
+        </ul>
+        <!-- 轮播图片 -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/轮播图/1.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="images/轮播图/2.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="images/轮播图/3.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="images/轮播图/4.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="images/轮播图/5.jpg">
+            </div>
         </div>
-        <!-- 轮播 -->
-        <!-- 图标 -->
+        <!-- 左右切换按钮 -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+    <!-- 轮播 -->
+
+
+
+    <!-- 图标 -->
+    <div class="heima_info hidden-xs">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <a href="">
+                            <div class="media">
+                                <div class="heima_icon">
+                                    <i class="iconfont icon-zhifu-01" style="font-size: 35px;"></i>
+
+                                </div>
+                                <div class="media-boby">
+                                    <h4 class="media-heading">支付交易保障</h4>
+                                    <p>银联支付全程保护支付安全</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <a href="#">
+                            <div class="media">
+                                <div class="heima_icon">
+                                    <i class="iconfont icon-baohusan" style="font-size: 35px;"></i>
+
+                                </div>
+                                <div class="media-baby">
+                                    <h4 class="media-heading">平台财产安全</h4>
+                                    <p>由PICC保驾护航</p>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <a href="">
+                            <div class="media">
+                                <div class="heima_icon">
+                                    <i class="iconfont icon-anquan" style="font-size: 35px;"></i>
+
+                                </div>
+                                <div class="media-baby">
+                                    <h4 class="media-heading">交易安全</h4>
+                                    <p>由保障公司对借保人承保</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <a href="">
+                            <div class="media">
+                                <div class="heima_icon">
+                                    <i class="iconfont icon-Dollar" style="font-size: 35px;"></i>
+
+                                </div>
+                                <div class="media-baby">
+                                    <h4 class="media-heading">安全保障</h4>
+                                    <p>独创八层安全保障机制</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <a href="">
+                            <div class="media">
+                                <div class="heima_icon">
+                                    <i class="iconfont icon-shangwutubiao-" style="font-size: 35px;"></i>
+
+                                </div>
+                                <div class="media-baby">
+                                    <h4 class="media-heading">筛选优质资产</h4>
+                                    <p>对接知名企业征信系统</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <a href="">
+                            <div class="media">
+                                <div class="heima_icon">
+                                    <i class="iconfont icon-pencircle" style="font-size: 35px;"></i>
+                                </div>
+                                <div class="media-baby">
+                                    <h4 class="media-heading">联合信息发布</h4>
+                                    <p>与名企共同发布利率指数报告</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 图标 -->
+
+
+    <!-- 预约 -->
+    <div class="heima_book">
         <div class="container">
-            <!-- Content here -->
-            <div class="row bg-light mt-5">
-
-                <div class="col-1 md-auto">
-                    <i class="iconfont icon-zhifu-01" style="font-size: 35px;"></i>
-                </div>
-                <div class="col-3" style="cursor: pointer;">
-                    <span>支付交易保障</span>
-                    <br>
-                    <span style="font-size:5px;">银联支付全程保护支付安全</span>
-                </div>
-                <div class="col-1 md-auto">
-                    <i class="iconfont icon-baohusan" style="font-size: 35px;"></i>
-                </div>
-                <div class="col-3" style="cursor: pointer;">
-                    <span>平台财产安全</span>
-                    <br>
-                    <span style="font-size:5px;">由PICC保驾护航</span>
-                </div>
-                <div class="col-1 md-auto">
-                    <i class="iconfont icon-anquan" style="font-size: 35px;"></i>
-                </div>
-
-                <div class="col-3" style="cursor: pointer;">
-                    <span>交易安全</span>
-                    <br>
-                    <span style="font-size:5px;">由保障公司对借保人承保</span>
-                </div>
-            </div>
-
-            <div class="row bg-light mt-5">
-
-                <div class="col-1 md-auto">
-                    <i class="iconfont icon-Dollar" style="font-size: 35px;"></i>
-                </div>
-                <div class="col-3" style="cursor: pointer;">
-                    <span>安全保障</span>
-                    <br>
-                    <span style="font-size:5px;">独创八层安全保障机制</span>
-                </div>
-                <div class="col-1 md-auto">
-                    <i class="iconfont icon-shangwutubiao-" style="font-size: 35px;"></i>
-                </div>
-                <div class="col-3" style="cursor: pointer;">
-                    <span>筛选优质资产</span>
-                    <br>
-                    <span style="font-size:5px;">对接知名企业征信系统</span>
-                </div>
-                <div class="col-1 md-auto">
-                    <i class="iconfont icon-pencircle" style="font-size: 35px;"></i>
-                </div>
-
-                <div class="col-3" style="cursor: pointer;">
-                    <span>联合信息发布</span>
-                    <br>
-                    <span style="font-size:5px;">与名企共同发布利率指数报告</span>
-                </div>
-            </div>
-            <!-- 图标 -->
-            <!-- 预约 -->
-            <div class="row mt-5" style="border-top: dotted;">
-                <div class="col-8 pt-4 ml-5">
-                    <i class="iconfont icon-naozhong"></i>
-                    <span style="font-size:6px;cursor: pointer;">现有273人在排队，累计预约交易成功7571次，什么是预约投标？</span>
-
-                </div>
-                <div class="col-2 pt-4">
+            <div class="pull-left">
+                <i class="iconfont icon-naozhong"></i>
+                <span style="font-size:16px;cursor: pointer;">现有273人在排队，累计预约交易成功7571次，什么是预约投标？</span>
+                <a href="">
                     <i class="iconfont icon-luxiang"></i>
-                    <span style="font-size:6px;cursor: pointer;">黑马程序员企业宣传片</span>
-                </div>
+                    <span style="font-size:16px;cursor: pointer;">黑马程序员企业宣传片</span>
+                </a>
             </div>
-            <!-- 预约 -->
-            <!-- 优惠劵 -->
-            <div class="row mt-5" style="border-bottom: dashed;">
-                <div class="col-2 pb-1" style="cursor: pointer;">
-                    特别推荐
-                </div>
-                <div class="col-2 pb-1" style="cursor: pointer;">
-                    黑马投资
-                </div>
-                <div class="col-2 pb-1" style="cursor: pointer;">
-                    优惠卷
-                </div>
-                <div class="col-2 pb-1" style="cursor: pointer;">
-                    优惠卷
-                </div>
+            <div class="pull-right hidden-xs">
+
             </div>
-            <div class="row mt-5">
-                <div class="col-4">
-                    <img src="images/优惠卷.png" style="width: 80%;height: 100%;">
-                </div>
-                <div class="col-4">
-                    <img src="images/优惠卷.png" style="width: 80%;height: 100%;">
-                </div>
-                <div class="col-4">
-                    <img src="images/优惠卷.png" style="width: 80%;height: 100%;">
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-4">
-                    <img src="images/优惠卷.png" style="width: 80%;height: 100%;">
-                </div>
-                <div class="col-4">
-                    <img src="images/优惠卷.png" style="width: 80%;height: 100%;">
-                </div>
-                <div class="col-4">
-                    <img src="images/优惠卷.png" style="width: 80%;height: 100%;">
-                </div>
-            </div>
-            <!-- 优惠劵 -->
         </div>
-        <!-- 还款 -->
+    </div>
+
+
+
+
+
+    <!-- 优惠劵标题 -->
+
+    <div class="container-fluid py-3">
+        <ul class="nav nav-tabs">
+            <div class="col">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">特别推荐</a>
+                </li>
+            </div>
+            <div class="col">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                        aria-expanded="false">项目投资</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">地产</a>
+                        <a class="dropdown-item" href="#">资源</a>
+                        <a class="dropdown-item" href="#">人才</a>
+                        <a class="dropdown-item" href="#">教育</a>
+                    </div>
+                </li>
+            </div>
+            <div class="col">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">黑马投资</a>
+                </li>
+            </div>
+            <div class="col">
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">实时信息</a>
+                </li>
+            </div>
+            <div class="col">
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">在线客服</a>
+                </li>
+            </div>
+            <div class="col">
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">在获取帮助</a>
+                </li>
+            </div>
+        </ul>
+
+    </div>
+    <!-- 优惠劵标题 -->
+
+
+
+    <!-- 优惠劵 -->
+
+    <div class="row">
+        <div class="col-sm">
+            <a href="#" class="product_box active">
+                <div class="product_box_right">
+                    <p><b>8</b><sub>%</sub></p>
+                    <p>年利率</p>
+                </div>
+                <div class="product_box_left">
+                    <h3 class="text-center">新手体验标1002期</h3>
+                    <div class="row">
+                        <div class="col-sm">
+                            <p>起投金额（元）</p>
+                            <p>0.01万</p>
+
+                        </div>
+                        <div class="col-sm">
+                            <p>已投标人数</p>
+                            <p>22</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm">
+                            <p>借款期限</p>
+                            <p>10天</p>
+
+                        </div>
+                        <div class="col-sm">
+                            <p>已投标总金额（元）</p>
+                            <p>2000</p>
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+
+        </div>
+        <div class="col-sm">
+            <a href="#" class="product_box active">
+                <div class="product_box_right">
+                    <p><b>8</b><sub>%</sub></p>
+                    <p>年利率</p>
+                </div>
+                <div class="product_box_left">
+                    <h3 class="text-center">新手体验标1002期</h3>
+                    <div class="row">
+                        <div class="col-sm">
+                            <p>起投金额（元）</p>
+                            <p>0.01万</p>
+
+                        </div>
+                        <div class="col-sm">
+                            <p>已投标人数</p>
+                            <p>22</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm">
+                            <p>借款期限</p>
+                            <p>10天</p>
+
+                        </div>
+                        <div class="col-sm">
+                            <p>已投标总金额（元）</p>
+                            <p>2000</p>
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+
+        </div>
+        <div class="col-sm">
+            <a href="#" class="product_box active">
+                <div class="product_box_right">
+                    <p><b>8</b><sub>%</sub></p>
+                    <p>年利率</p>
+                </div>
+                <div class="product_box_left">
+                    <h3 class="text-center">新手体验标1002期</h3>
+                    <div class="row">
+                        <div class="col-sm">
+                            <p>起投金额（元）</p>
+                            <p>0.01万</p>
+
+                        </div>
+                        <div class="col-sm">
+                            <p>已投标人数</p>
+                            <p>22</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm">
+                            <p>借款期限</p>
+                            <p>10天</p>
+
+                        </div>
+                        <div class="col-sm">
+                            <p>已投标总金额（元）</p>
+                            <p>2000</p>
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+
+        </div>
+        <div class="col-sm">
+            <a href="#" class="product_box active">
+                <div class="product_box_right">
+                    <p><b>8</b><sub>%</sub></p>
+                    <p>年利率</p>
+                </div>
+                <div class="product_box_left">
+                    <h3 class="text-center">新手体验标1002期</h3>
+                    <div class="row">
+                        <div class="col-sm">
+                            <p>起投金额（元）</p>
+                            <p>0.01万</p>
+
+                        </div>
+                        <div class="col-sm">
+                            <p>已投标人数</p>
+                            <p>22</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm">
+                            <p>借款期限</p>
+                            <p>10天</p>
+
+                        </div>
+                        <div class="col-sm">
+                            <p>已投标总金额（元）</p>
+                            <p>2000</p>
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+    <!-- 优惠劵 -->
+
+
+    <hr>
+
+    <!-- 还款 -->
+
+    <div class="heima_news py-5">
         <div class="container">
-            <div class="row mt-5" style="border-top: dotted;">
-                <div class="col-2 pt-4 ml-5" style="border-bottom: dotted;text-align: center;">
-                    <span style="font-size:20px;cursor: pointer;">全部新闻</span>
+            <div class="row">
+                <div class="col-md-2 col-md-offset-2">
+                    <div class="news_title">全部新闻</div>
                 </div>
+                <div class="col-md-1">
+                    <div class="news_line hidden-sm hidden-xs"></div>
 
-                <div class="col-1 pt-4">
-                    <div class="circle" style="text-align: center;line-height: 32px;">
-                        <a href="#">
-                            <i class="iconfont icon-wangluo" style="font-size: 25px;"></i>
-                        </a>
+                    <ul class="nav nav-tabs-news" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#home" aria-controls="home" role="tab" data-tooggle="tab">
+                                <i class="iconfont icon-wangluo" style="font-size: 50px;"></i>
+                        </li>
+                        <li role="presentation">
+                            <a href="#profile" aria-controls="profile" role="tab" data-tooggle="tab">
+                                <i class="iconfont icon-shangwutubiao-" style="font-size: 50px;"></i>
+
+                        </li>
+                        <li role="presentation">
+                            <a href="#settings" aria-controls="settings" role="tab" data-tooggle="tab">
+                                <i class="iconfont icon-yuyin" style="font-size: 50px;"></i>
+                        </li>
+                        <li role="presentation">
+                            <a href="#settings" aria-controls="settings" role="tab" data-tooggle="tab">
+                                <i class="iconfont icon-diannao" style="font-size: 50px;"></i>
+
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-md-7">
+
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            <ul>
+                                <li>
+                                    <a href="#"><span class="hidden-xs">2018-1-02</span>
+                                        【黑马还款】一周还款公告2018年12月23日-2018年12月29日
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="hidden-xs">2018-1-02</span>
+                                        【黑马还款】一周还款公告2018年12月23日-2018年12月29日
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="hidden-xs">2018-1-02</span>
+                                        【黑马还款】一周还款公告2018年12月23日-2018年12月29日
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="hidden-xs">2018-1-02</span>
+                                        【黑马还款】一周还款公告2018年12月23日-2018年12月29日
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="hidden-xs">2018-1-02</span>
+                                        【黑马还款】一周还款公告2018年12月23日-2018年12月29日
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="hidden-xs">2018-1-02</span>
+                                        【黑马还款】一周还款公告2018年12月23日-2018年12月29日
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="hidden-xs">2018-1-02</span>
+                                        【黑马还款】一周还款公告2018年12月23日-2018年12月29日
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="hidden-xs">2018-1-02</span>
+                                        【黑马还款】一周还款公告2018年12月23日-2018年12月29日
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div role="tabpabel" class="tab-pane" id="profile">...</div>
+                        <div role="tabpabel" class="tab-pane" id="messages">...</div>
+                        <div role="tabpabel" class="tab-pane" id="settings">...</div>
                     </div>
                 </div>
-
-                <div class="col-3 pt-3">
-                    <span style="font-size:5px;cursor: pointer;">2017-11-22[黑马还款]一周还款公告2016年1月18日-1月24日</span>
-                    <br>
-                    <span style="font-size:5px;cursor: pointer;">2017-11-22[黑马还款]一周还款公告2016年1月18日-1月24日</span>
-                </div>
-            </div>
-
-            <div class="row mt-5">
-                <div class="col-2 pt-4 ml-5">
-                    <span></span>
-                </div>
-
-                <div class="col-1 pt-4">
-                    <div class="circle" style="text-align: center;line-height: 32px;">
-                        <a href="#">
-                            <i class="iconfont icon-shangwutubiao-" style="font-size: 25px;"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-3 pt-3">
-                    <span style="font-size:5px;cursor: pointer;">2017-11-22[黑马还款]一周还款公告2016年1月18日-1月24日</span>
-                    <br>
-                    <span style="font-size:5px;cursor: pointer;">2017-11-22[黑马还款]一周还款公告2016年1月18日-1月24日</span>
-                </div>
-
-            </div>
-            <div class="row mt-5">
-                <div class="col-2 pt-4 ml-5">
-                    <span></span>
-                </div>
-
-                <div class="col-1 pt-4">
-                    <div class="circle" style="text-align: center;line-height: 32px;">
-                        <a href="#">
-                            <i class="iconfont icon-yuyin" style="font-size: 25px;"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-3 pt-3">
-                    <span style="font-size:5px;cursor: pointer;">2017-11-22[黑马还款]一周还款公告2016年1月18日-1月24日</span>
-                    <br>
-                    <span style="font-size:5px;cursor: pointer;">2017-11-22[黑马还款]一周还款公告2016年1月18日-1月24日</span>
-                </div>
-
-            </div>
-            <div class="row mt-5">
-                <div class="col-2 pt-4 ml-5">
-                    <span></span>
-                </div>
-
-                <div class="col-1 pt-4">
-                    <div class="circle" style="text-align: center;line-height: 32px;">
-                        <a href="#">
-                            <i class="iconfont icon-diannao" style="font-size: 25px;"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-3 pt-3">
-                    <span style="font-size:5px;cursor: pointer;">2017-11-22[黑马还款]一周还款公告2016年1月18日-1月24日</span>
-                    <br>
-                    <span style="font-size:5px;cursor: pointer;">2017-11-22[黑马还款]一周还款公告2016年1月18日-1月24日</span>
-                </div>
-
             </div>
         </div>
-        <!-- 还款 -->
+    </div>
+    <!-- 还款 -->
 
-        <!-- 合作伙伴 -->
+
+
+    <!-- footer 模块 -->
+
+
+
+    <footer class="heima_partner py-3">
         <div class="container">
             <h4 style="text-align:center;padding-top: 50px;cursor: pointer;">合作伙伴</h4>
             <!-- Content here -->
@@ -325,9 +573,9 @@
                 </div>
             </div>
         </div>
-        <!-- 合作伙伴 -->
+    </footer>
 
-    </div>
+
 
 
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
